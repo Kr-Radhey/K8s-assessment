@@ -47,18 +47,18 @@ MongoDB StatefulSet
 ```
 k8s/
 ├── backend/
-│   ├── deployment.yaml
-│   └── service.yaml
+│   ├── deployment.yml
+│   └── service.yml
 ├── frontend/
-│   ├── deployment.yaml
-│   └── service.yaml
+│   ├── deployment.yml
+│   └── service.yml
 ├── mongodb/
-│   ├── statefulset.yaml
-│   └── service.yaml
+│   ├── statefulset.yml
+│   └── service.yml
 ├── config/
-│   ├── configmap.yaml
-│   └── secret.yaml
-└── namespace.yaml
+│   ├── configmap.yml
+│   └── secret.yml
+└── namespace.yml
 ```
 
 ## Deployment
@@ -66,14 +66,14 @@ k8s/
 Create the namespace:
 
 ```bash
-kubectl apply -f k8s/namespace.yaml
+kubectl apply -f k8s/namespace.yml
 ```
 
 Deploy configuration:
 
 Copy the example secret file and update the credentials as required:
 ```bash
-cp k8s/config/secret-example.yaml k8s/config/secret.yaml
+cp k8s/config/secret-example.yml k8s/config/secret.yml
 ```
 Apply the Secret:
 ```bash
