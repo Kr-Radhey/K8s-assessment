@@ -71,6 +71,11 @@ kubectl apply -f k8s/namespace.yaml
 
 Deploy configuration:
 
+Copy the example secret file and update the credentials as required:
+```bash
+cp k8s/config/secret-example.yaml k8s/config/secret.yaml
+```
+Apply the Secret:
 ```bash
 kubectl apply -f k8s/config/
 ```
