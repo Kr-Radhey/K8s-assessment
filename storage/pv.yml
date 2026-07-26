@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: PersistentVolume
+
+metadata:
+  name: mongodb-pv
+
+spec:
+  capacity:
+    storage: 2Gi
+
+  accessModes:
+    - ReadWriteOnce        # as I have only one node so used Once instead of Many
+
+  persistentVolumeReclaimPolicy: Retain
+
+  hostPath:
+    path: /mnt/data/mongodb

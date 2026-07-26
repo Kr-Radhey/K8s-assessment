@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+
+metadata:
+  name: mongodb-pvc
+  namespace: assessment
+
+spec:
+  storageClassName: ""      # otherwise KIND assigns this to Standard
+
+  accessModes:
+    - ReadWriteOnce     # as same used in PV (this must be same as PV)
+
+  resources:
+    requests:
+      storage: 2Gi
+
+  volumeName: mongodb-pv     # Our PV name as this Binds PVC to PV
